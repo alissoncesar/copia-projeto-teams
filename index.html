@@ -82,11 +82,11 @@
         <div id="editar" class="w-[500px] bg-cinza3 p-[26px] rounded-lg fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 invisible opacity-0">
             <div class="flex justify-between items-center">
                 <h2 class="text-white text-[24px] font-bold">Adicionar participantes</h2>
-                <box-icon name='x' class="fill-white cursor-pointer hover:fill-rosa duration-200"></box-icon>
+                <box-icon name='x' class="fill-white cursor-pointer hover:fill-rosa duration-200" onclick="esconderEditar(), esconderOverlay()"></box-icon>
             </div>
-            <form class="mt-4">
+            <form onsubmit="criarParticipante()" class="mt-4">
                 <label for="nome" class="text-white text-[12px] uppercase font-bold block mb-[6px]">Nome do Participante</label>
-                <input type="text" class="w-full h-[40px] text-white bg-cinza2 outline-none border-2 border-cinza1 rounded-lg duration-200 focus:border-rosa mb-4 pl-4">
+                <input type="text" id="nome-do-participante" class="w-full h-[40px] text-white bg-cinza2 outline-none border-2 border-cinza1 rounded-lg duration-200 focus:border-rosa mb-4 pl-4">
                 <button class="w-full h-[40px] flex items-center border-2 border-rosa rounded-lg text-white text-[12px] uppercase font-bold relative group">
                     <span class="w-0 h-full absolute top-0 left-0 bg-rosa duration-200 group-hover:w-full"></span>
                     <span class="w-full relative z-10 text-center">Criar</span>
